@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import data from '../data.json' assert { type: 'json' }
 
-const { title, description } = data
+const { title, description, training } = data
 const about = data.about
 ---
 
@@ -22,39 +22,22 @@ const about = data.about
         The training provided to future talents is a comprehensive and strategic process aimed at enhancing their capabilities, preparing them to face the challenges of the professional environment
         and fostering their personal development.
       </p>
-      <article>
-        <section>
-          <h3>Personalized approach</h3>
-          <p>Each talent is unique, so training is tailored to their skills, interests and learning pace, allowing them to grow in an authentic and sustainable way.</p>
-        </section>
-        <section>
-          <h3>Development of key competencies</h3>
-          <p>We work both on technical skills (specific knowledge of the area) and soft skills, such as:</p>
-          <ul>
-            <li>Effective communication</li>
-            <li>Effective communication</li>
-            <li>Team work</li>
-            <li>Leadership</li>
-            <li>Critical thinking</li>
-            <li>Problem solving</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Practical and experiential learning</h3>
-          <p>Through workshops, real projects, mentoring and simulations, we ensure that future talents apply what they have learned in real contexts, strengthening their capacity for action.</p>
-        </section>
-        <section>
-          <h3>Accompaniment and mentoring</h3>
-          <p>Experienced professionals guide the talents, offering guidance, feedback and constant support in their growth process.</p>
-        </section>
-        <section>
-          <h3>Promoting innovation and strategic thinking</h3>
-          <p>An open, adaptable and proactive mentality is encouraged, enabling talents to lead change and generate creative solutions.</p>
-        </section>
-        <section>
-          <h3>Ethics and values</h3>
-          <p>We promote a sense of responsibility, social commitment and professional ethics, essential for building a sustainable and just future.</p>
-        </section>
+      <article class='no-prose'>
+        {
+          training.map((e) => (
+            <details class='mb-4'>
+              <summary>{e.title}</summary>
+              <p>{e.description}</p>
+              {e.list && e.list.length > 0 && (
+                <ul>
+                  {e.list.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              )}
+            </details>
+          ))
+        }
       </article>
       <p>The training of new talents not only seeks to transmit knowledge, but also to form people of integrity, prepared to contribute value in any field with vision, passion and purpose.</p>
     </article>
