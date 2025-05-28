@@ -1,20 +1,21 @@
 ---
 import data from '../data.json' assert { type: 'json' }
+import NavLink from './NavLink.astro'
 const { title, description } = data.header
 ---
 
 <header class='h-[100dvh] w-full p-8 overlay'>
-  <nav class='flex justify-between mb-4 relative'>
+  <nav class='flex justify-between mb-4 relative max-w-[1500px] m-auto'>
     <a href='#' class='text-2xl'>Logo</a>
     <section class='flex gap-4 items-center'>
-      <a href='#' class='text-2xl text-white hover:text-gray-300'>Home</a>
-      <a href='#about' class='text-2xl text-white hover:text-gray-300'>About</a>
-      <a href='#training' class='text-2xl text-white hover:text-gray-300'>Training</a>
+      <NavLink href='#' text='Home' />
+      <NavLink href='#about' text='About' />
+      <NavLink href='#training' text='Training' />
     </section>
   </nav>
-  <main class='max-w-[1500px] flex flex-col gap-30 m-auto items-center justify-center h-1/2'>
+  <main class='max-w-[1500px] flex flex-col gap-30 m-auto items-center justify-center h-3/4'>
     <article class='relative flex items-center justify-center'>
-      <section class='prose dark:prose-invert'>
+      <section class='prose dark:prose-invert text-center'>
         <h1 class='text-5xl'>{title}</h1>
         <p class='text-xl text-gray-500 dark:text-gray-300'>{description}</p>
       </section>
