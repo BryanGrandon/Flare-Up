@@ -1,22 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import data from '../data.json' assert { type: 'json' }
+import Header from '../components/header.astro'
 
-const { title, description, training } = data
+const { training } = data
 const about = data.about
 ---
 
 <Layout>
-  <header class='prose dark:prose-invert'>
-    <h1>{title}</h1>
-    <p class='text-lg text-gray-500 dark:text-gray-400'>{description}</p>
-  </header>
+  <Header />
+
   <main>
-    <article class='prose-lg dark:prose-invert'>
+    <article id='about' class='prose-lg dark:prose-invert'>
       <h2>About</h2>
       {about.map((e) => <p>{e}</p>)}
     </article>
-    <article class='prose-lg dark:prose-invert'>
+    <article id='training' class='prose-lg dark:prose-invert'>
       <h2>Training</h2>
       <p>
         The training provided to future talents is a comprehensive and strategic process aimed at enhancing their capabilities, preparing them to face the challenges of the professional environment
@@ -43,17 +42,3 @@ const about = data.about
     </article>
   </main>
 </Layout>
-
-<style>
-  h1 {
-    font-family: 'Basicaline', sans-serif;
-  }
-
-  @font-face {
-    font-family: 'Basicaline';
-    src: url('/fonts/Basicaline.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-</style>

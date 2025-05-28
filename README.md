@@ -1,8 +1,8 @@
-# Future Star
+# Flare Up
 
 We foster the growth of new talent through training, mentoring and real opportunities. We transform potential into trajectory.
 
-<!-- - [🌐 Website Demo.](https://bryangrandon.github.io/Future-Star/) -->
+<!-- - [🌐 Website Demo.](https://bryangrandon.github.io/Flare-Up/) -->
 
 ## 📚 Technologies Used
 
@@ -15,13 +15,13 @@ We foster the growth of new talent through training, mentoring and real opportun
 Clone the repository:
 
 ```bash
-git clone https://github.com/BryanGrandon/Future-Star
+git clone https://github.com/BryanGrandon/Flare-Up
 ```
 
 Access the project folder
 
 ```bash
-cd Dragon-Ball
+cd Flare-Up
 ```
 
 Install all the project dependencies with:
