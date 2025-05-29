@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import data from '../data.json' assert { type: 'json' }
-import Header from '../components/header.astro'
+import Header from '../components/Header.astro'
 
 const { training } = data
 const about = data.about
@@ -10,10 +10,12 @@ const about = data.about
 <Layout>
   <Header />
 
-  <main>
+  <main class='max-w-[1500px] m-auto flex flex-col gap-8 p-8'>
     <article id='about' class='prose-lg dark:prose-invert'>
       <h2>About</h2>
-      {about.map((e) => <p>{e}</p>)}
+      <section>
+        {about.map((e) => <p>{e}</p>)}
+      </section>
     </article>
     <article id='training' class='prose-lg dark:prose-invert'>
       <h2>Training</h2>
@@ -42,3 +44,22 @@ const about = data.about
     </article>
   </main>
 </Layout>
+
+<style>
+  h2 {
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Basicaline', sans-serif;
+
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  @font-face {
+    font-family: 'Basicaline';
+    src: url('/fonts/Basicaline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>
