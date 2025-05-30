@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import data from '../data.json' assert { type: 'json' }
 import Header from '../components/Header.astro'
+import Title from '../components/Title.astro'
 
 const { training } = data
 const about = data.about
@@ -10,22 +11,20 @@ const about = data.about
 <Layout>
   <Header />
 
-  <main class='max-w-[1500px] m-auto flex flex-col gap-8 p-8'>
+  <main class='max-w-[1500px] m-auto flex flex-col gap-16 pt-10'>
     <article id='about' class='prose-lg dark:prose-invert'>
-      <h2>About</h2>
+      <Title text='About Us' />
       <section>
-        {about.map((e) => <p>{e}</p>)}
+        {about.map((e) => <p class=''>{e}</p>)}
       </section>
     </article>
+
     <article id='training' class='prose-lg dark:prose-invert'>
-      <h2>Training</h2>
-      <p>
-        The training provided to future talents is a comprehensive and strategic process aimed at enhancing their capabilities, preparing them to face the challenges of the professional environment
-        and fostering their personal development.
-      </p>
+      <Title text={training.title} />
+      <p>{training.description_1}</p>
       <article class='no-prose'>
         {
-          training.map((e) => (
+          training.list.map((e) => (
             <details class='mb-4'>
               <summary>{e.title}</summary>
               <p>{e.description}</p>
@@ -40,26 +39,15 @@ const about = data.about
           ))
         }
       </article>
-      <p>The training of new talents not only seeks to transmit knowledge, but also to form people of integrity, prepared to contribute value in any field with vision, passion and purpose.</p>
+      <p>{training.description_2}</p>
+    </article>
+
+    <article id='contact' class='prose-lg dark:prose-invert'>
+      <Title text='Contact' />
+      <p>If you are interested in our training programs or have any questions, please do not hesitate to contact us. We are here to help you take the next step in your professional journey.</p>
+      <p>
+        Email: <a href='mailto:' class='text-blue-500 hover:underline'> </a>
+      </p>
     </article>
   </main>
 </Layout>
-
-<style>
-  h2 {
-    font-weight: bold;
-    letter-spacing: 2px;
-    font-family: 'Basicaline', sans-serif;
-
-    font-size: 2.5rem;
-    text-align: center;
-  }
-
-  @font-face {
-    font-family: 'Basicaline';
-    src: url('/fonts/Basicaline.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-</style>

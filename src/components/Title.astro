@@ -1,0 +1,22 @@
+---
+interface Props {
+  text: string
+}
+const { text } = Astro.props
+---
+
+<h2 class='font-bold text-5xl tracking-wider after:content-[""] after:block after:absolute after:w-15 after:h-1 after:bg-primary after:rounded-2xl'>{text}</h2>
+
+<style>
+  h2 {
+    font-family: 'Basicaline', sans-serif;
+  }
+
+  @font-face {
+    font-family: 'Basicaline';
+    src: url('/fonts/Basicaline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+</style>
