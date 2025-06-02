@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro'
 import data from '../data.json' assert { type: 'json' }
 import Header from '../components/Header.astro'
 import Title from '../components/Title.astro'
-
+import Card from '../components/Card.astro'
 const { training } = data
 const about = data.about
 ---
@@ -11,33 +11,19 @@ const about = data.about
 <Layout>
   <Header />
 
-  <main class='max-w-[1500px] m-auto flex flex-col gap-16 pt-10'>
+  <main class='max-w-[1500px] m-auto flex flex-col gap-16 pt-10 p-4'>
     <article id='about' class='prose-lg dark:prose-invert'>
       <Title text='About Us' />
       <section>
-        {about.map((e) => <p class=''>{e}</p>)}
+        {about.map((e) => <p>{e}</p>)}
       </section>
     </article>
 
     <article id='training' class='prose-lg dark:prose-invert'>
       <Title text={training.title} />
       <p>{training.description_1}</p>
-      <article class='no-prose'>
-        {
-          training.list.map((e) => (
-            <details class='mb-4'>
-              <summary>{e.title}</summary>
-              <p>{e.description}</p>
-              {e.list && e.list.length > 0 && (
-                <ul>
-                  {e.list.map((item) => (
-                    <li>{item}</li>
-                  ))}
-                </ul>
-              )}
-            </details>
-          ))
-        }
+      <article class='not-prose grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+        {training.list.map((e) => <Card title={e.title} description={e.description} />)}
       </article>
       <p>{training.description_2}</p>
     </article>
