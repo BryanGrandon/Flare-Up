@@ -14,9 +14,12 @@ const about = data.about
   <main class='max-w-[1500px] m-auto flex flex-col gap-16 pt-10 p-4'>
     <article id='about' class='prose-lg dark:prose-invert'>
       <Title text='About Us' />
-      <section>
-        {about.map((e) => <p>{e}</p>)}
-      </section>
+      <article class='flex lg:flex-row flex-col gap-4'>
+        <section>
+          {about.map((e) => <p>{e}</p>)}
+        </section>
+        <img src='../../public/team.svg' alt='Our_Team' class='w-100 m-auto' />
+      </article>
     </article>
 
     <article id='training' class='prose-lg dark:prose-invert'>
@@ -36,4 +39,10 @@ const about = data.about
       </p>
     </article>
   </main>
+  <footer>
+    <section>
+      <h3>Attribute</h3>
+      <a href='https://storyset.com/business'>Business illustrations by Storyset</a>
+    </section>
+  </footer>
 </Layout>
