@@ -7,9 +7,7 @@ interface Props {
 const { title, description } = Astro.props
 ---
 
-<section class='rounded-lg p-2 flex flex-col gap-2 border border-primary border-solid'>
-  <h3 class='text-xl font-bold'>{title}</h3>
-  <section>
-    <p>{description}</p>
-  </section>
-</section>
+<details>
+  <summary class='font-bold'>{title}.</summary>
+  <p class='px-5'>{description}</p>
+</details>
