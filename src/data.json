@@ -10,8 +10,7 @@
     ],
     "training": {
         "title": "Training for the future",
-        "description_1": "We offer a comprehensive training program designed to develop the skills and competencies necessary for success in today's dynamic and competitive world. Our approach is based on personalized learning, practical experience and constant support, ensuring that each talent can reach their full potential.",
-        "description_2": "The training of new talents not only seeks to transmit knowledge, but also to form people of integrity, prepared to contribute value in any field with vision, passion and purpose.",
+        "paragraphs": "We offer a comprehensive training program aimed at developing the skills and competencies needed to succeed in a dynamic and competitive environment. Our approach is based on personalized learning, hands-on experience and ongoing support, ensuring that each talent can reach their full potential. In addition to transmitting knowledge, we seek to develop people of integrity, capable of adding value with vision, passion and purpose in any field.",
         "list": [
             {
                 "title": "Personalized approach",
@@ -37,6 +36,14 @@
                 "title": "Ethics and values",
                 "description": "We promote a sense of responsibility, social commitment and professional ethics, essential for building a sustainable and just future."
             }
+        ]
+    },
+    "contact": {
+        "title": "Contact us",
+        "paragraphs": [
+            "If you are interested in our training programs or have any questions, please do not hesitate to contact us. We are here to help you and provide you with all the information you need.",
+            "We know that taking the next step in your professional development may generate doubts or concerns, that's why our team is ready to guide you through every step of the process. Whether you are just starting out on your journey or looking to enhance your skills, we are here to help you reach your goals.",
+            "You are not alone in this journey: we offer you support, concrete tools and a learning network that turns potential into real professional projection."
         ]
     }
 }
