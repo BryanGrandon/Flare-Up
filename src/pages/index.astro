@@ -4,7 +4,7 @@ import data from '../data.json' assert { type: 'json' }
 import Header from '../components/Header.astro'
 import Title from '../components/Title.astro'
 import Card from '../components/Card.astro'
-const { training } = data
+const { training, contact } = data
 const about = data.about
 ---
 
@@ -18,31 +18,38 @@ const about = data.about
         <section>
           {about.map((e) => <p>{e}</p>)}
         </section>
-        <img src='../../public/team.svg' alt='Our_Team' class='w-100 m-auto' />
+        <img src='/public/team.svg' alt='Our_Team' class='w-100 m-auto' />
       </article>
     </article>
 
     <article id='training' class='prose-lg dark:prose-invert'>
       <Title text={training.title} />
-      <p>{training.description_1}</p>
+      <p>{training.paragraphs}</p>
+
       <article class='not-prose grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
         {training.list.map((e) => <Card title={e.title} description={e.description} />)}
       </article>
-      <p>{training.description_2}</p>
     </article>
 
     <article id='contact' class='prose-lg dark:prose-invert'>
       <Title text='Contact' />
-      <p>If you are interested in our training programs or have any questions, please do not hesitate to contact us. We are here to help you take the next step in your professional journey.</p>
-      <p>
-        Email: <a href='mailto:' class='text-blue-500 hover:underline'> </a>
-      </p>
+      <article class='flex lg:flex-row flex-col gap-4'>
+        <section>
+          {contact.paragraphs.map((e) => <p>{e}</p>)}
+          <ul>
+            <li>Email: <a href='mailto:' class='text-blue-500 hover:underline'>midas_touch@gmail.com</a></li>
+            <li>Phone: <a href='tel:+1234567890' class='text-blue-500 hover:underline'>+1 234 567 890</a></li>
+            <li>Address: 1234 Training Lane, Skill City, ST 56789</li>
+          </ul>
+        </section>
+        <img src='/public/contact-us.svg' alt='Contact Us' class='w-100' />
+      </article>
     </article>
   </main>
   <footer>
     <section>
       <h3>Attribute</h3>
-      <a href='https://storyset.com/business'>Business illustrations by Storyset</a>
+      <a href='https://storyset.com/business' target='_blank'>Business illustrations by Storyset</a>
     </section>
   </footer>
 </Layout>
