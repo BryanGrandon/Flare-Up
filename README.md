@@ -1,4 +1,4 @@
-# Flare Up
+# Midas Touch
 
 We foster the growth of new talent through training, mentoring and real opportunities. We transform potential into trajectory.
 
@@ -15,13 +15,13 @@ We foster the growth of new talent through training, mentoring and real opportun
 Clone the repository:
 
 ```bash
-git clone https://github.com/BryanGrandon/Flare-Up
+git clone https://github.com/BryanGrandon/Midas-Touch
 ```
 
 Access the project folder
 
 ```bash
-cd Flare-Up
+cd Midas-Touch
 ```
 
 Install all the project dependencies with:
