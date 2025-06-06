@@ -12,16 +12,6 @@ const about = data.about
   <Header />
 
   <main class='max-w-[1500px] m-auto flex flex-col gap-16 pt-10 p-4'>
-    <article id='about' class='prose-lg dark:prose-invert'>
-      <Title text='About Us' />
-      <article class='flex lg:flex-row flex-col gap-4'>
-        <section>
-          {about.map((e) => <p>{e}</p>)}
-        </section>
-        <img src='/public/team.svg' alt='Our_Team' class='w-100 m-auto' />
-      </article>
-    </article>
-
     <article id='training' class='prose-lg dark:prose-invert'>
       <Title text={training.title} />
       <p>{training.paragraphs}</p>
@@ -33,17 +23,85 @@ const about = data.about
       </article>
     </article>
 
+    <article id='about' class='prose-lg dark:prose-invert'>
+      <Title text='About Us' />
+      <article class='flex lg:flex-row flex-col gap-4'>
+        <section>
+          {about.map((e) => <p>{e}</p>)}
+        </section>
+        <img src='/public/team.svg' alt='Our_Team' class='w-100 m-auto' />
+      </article>
+    </article>
+
     <article id='contact' class='prose-lg dark:prose-invert'>
       <Title text='Contact' />
       <article class='flex lg:flex-row flex-col gap-4'>
-        <section>
+        <article>
           {contact.paragraphs.map((e) => <p>{e}</p>)}
-          <ul>
-            <li>Email: <a href='mailto:' class='text-blue-500 hover:underline'>midas_touch@gmail.com</a></li>
-            <li>Phone: <a href='tel:+1234567890' class='text-blue-500 hover:underline'>+1 234 567 890</a></li>
-            <li>Address: 1234 Training Lane, Skill City, ST 56789</li>
-          </ul>
-        </section>
+          <article class='flex flex-col gap-4'>
+            <section class='not-prose flex flex-col gap-2'>
+              <span class='flex items-center gap-4'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='24'
+                  height='24'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  stroke='currentColor'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  class='icon icon-tabler icons-tabler-outline icon-tabler-phone'
+                  ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path d='M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2'></path></svg
+                >
+                <p>Phone</p>
+              </span>
+              <p class='px-8 text-gray-400'>+1 234 567 890</p>
+            </section>
+
+            <section class='not-prose flex flex-col gap-2'>
+              <span class='flex items-center gap-4'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='24'
+                  height='24'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  stroke='currentColor'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  class='icon icon-tabler icons-tabler-outline icon-tabler-mail'
+                  ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path d='M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z'></path><path d='M3 7l9 6l9 -6'
+                  ></path></svg
+                >
+                <p>Email</p>
+              </span>
+              <p class='px-8 text-gray-400'>contact@themidasgroup.co</p>
+            </section>
+
+            <section class='not-prose flex flex-col gap-2'>
+              <span class='flex items-center gap-4'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='24'
+                  height='24'
+                  viewBox='0 0 24 24'
+                  fill='none'
+                  stroke='currentColor'
+                  stroke-width='2'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'
+                  class='icon icon-tabler icons-tabler-outline icon-tabler-building'
+                  ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path d='M3 21l18 0'></path><path d='M9 8l1 0'></path><path d='M9 12l1 0'></path><path d='M9 16l1 0'></path><path
+                    d='M14 8l1 0'></path><path d='M14 12l1 0'></path><path d='M14 16l1 0'></path><path d='M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16'></path></svg
+                >
+                <p>Address</p>
+              </span>
+              <p class='px-8 text-gray-400'>1234 Training Lane, Skill City, ST 56789</p>
+            </section>
+          </article>
+        </article>
         <img src='/public/contact-us.svg' alt='Contact Us' class='w-100' />
       </article>
     </article>
