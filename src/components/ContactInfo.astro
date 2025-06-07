@@ -1,0 +1,16 @@
+---
+interface Contact_Info {
+  title: string
+  text: string
+}
+
+const { title, text } = Astro.props as Contact_Info
+---
+
+<section class='not-prose flex flex-col gap-2'>
+  <span class='flex items-center gap-4'>
+    <slot name='icon' />
+    <p>{title}</p>
+  </span>
+  <p class='px-8 text-gray-400'>{text}</p>
+</section>

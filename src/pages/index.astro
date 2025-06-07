@@ -4,6 +4,11 @@ import data from '../data.json' assert { type: 'json' }
 import Header from '../components/Header.astro'
 import Title from '../components/Title.astro'
 import Card from '../components/Card.astro'
+import IconPhone from '../components/icons/IconPhone.astro'
+import IconEmail from '../components/icons/IconEmail.astro'
+import IconAddress from '../components/icons/IconAddress.astro'
+import ContactInfo from '../components/ContactInfo.astro'
+
 const { training, contact } = data
 const about = data.about
 ---
@@ -19,7 +24,7 @@ const about = data.about
         <section class='not-prose flex flex-col gap-4'>
           {training.list.map((e) => <Card title={e.title} description={e.description} />)}
         </section>
-        <img src='/public/conference.svg' alt='' class='w-80' />
+        <img src='/conference.svg' alt='' class='w-80' />
       </article>
     </article>
 
@@ -29,80 +34,23 @@ const about = data.about
         <section>
           {about.map((e) => <p>{e}</p>)}
         </section>
-        <img src='/public/team.svg' alt='Our_Team' class='w-100 m-auto' />
+        <img src='/team.svg' alt='Our_Team' class='w-100 m-auto' />
       </article>
     </article>
 
     <article id='contact' class='prose-lg dark:prose-invert'>
-      <Title text='Contact' />
+      <Title text='Contact US' />
       <article class='flex lg:flex-row flex-col gap-4'>
         <article>
           {contact.paragraphs.map((e) => <p>{e}</p>)}
+
           <article class='flex flex-col gap-4'>
-            <section class='not-prose flex flex-col gap-2'>
-              <span class='flex items-center gap-4'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='24'
-                  height='24'
-                  viewBox='0 0 24 24'
-                  fill='none'
-                  stroke='currentColor'
-                  stroke-width='2'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  class='icon icon-tabler icons-tabler-outline icon-tabler-phone'
-                  ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path d='M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2'></path></svg
-                >
-                <p>Phone</p>
-              </span>
-              <p class='px-8 text-gray-400'>+1 234 567 890</p>
-            </section>
-
-            <section class='not-prose flex flex-col gap-2'>
-              <span class='flex items-center gap-4'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='24'
-                  height='24'
-                  viewBox='0 0 24 24'
-                  fill='none'
-                  stroke='currentColor'
-                  stroke-width='2'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  class='icon icon-tabler icons-tabler-outline icon-tabler-mail'
-                  ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path d='M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z'></path><path d='M3 7l9 6l9 -6'
-                  ></path></svg
-                >
-                <p>Email</p>
-              </span>
-              <p class='px-8 text-gray-400'>contact@themidasgroup.co</p>
-            </section>
-
-            <section class='not-prose flex flex-col gap-2'>
-              <span class='flex items-center gap-4'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  width='24'
-                  height='24'
-                  viewBox='0 0 24 24'
-                  fill='none'
-                  stroke='currentColor'
-                  stroke-width='2'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'
-                  class='icon icon-tabler icons-tabler-outline icon-tabler-building'
-                  ><path stroke='none' d='M0 0h24v24H0z' fill='none'></path><path d='M3 21l18 0'></path><path d='M9 8l1 0'></path><path d='M9 12l1 0'></path><path d='M9 16l1 0'></path><path
-                    d='M14 8l1 0'></path><path d='M14 12l1 0'></path><path d='M14 16l1 0'></path><path d='M5 21v-16a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v16'></path></svg
-                >
-                <p>Address</p>
-              </span>
-              <p class='px-8 text-gray-400'>1234 Training Lane, Skill City, ST 56789</p>
-            </section>
+            <ContactInfo title='Phone' text='+1 234 567 890'><IconPhone slot='icon' /></ContactInfo>
+            <ContactInfo title='Email' text='contact@themidasgroup.co'><IconEmail slot='icon' /></ContactInfo>
+            <ContactInfo title='Address' text='1234 Training Lane, Skill City, ST 56789'><IconAddress slot='icon' /></ContactInfo>
           </article>
         </article>
-        <img src='/public/contact-us.svg' alt='Contact Us' class='w-100' />
+        <img src='/contact-us.svg' alt='Contact Us' class='w-100' />
       </article>
     </article>
   </main>
