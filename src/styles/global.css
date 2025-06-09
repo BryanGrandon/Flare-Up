@@ -5,6 +5,7 @@
 @theme {
   --color-primary: #ff7129;
   --color-secondary: #030726;
+  --color-secondary-t: #0307266e;
   --color-background: #ef5808;
 }
 
@@ -19,6 +20,7 @@
       left: 0;
       right: 0;
       background-color: #000000a9;
+      color: #0307266e;
     }
   }
 

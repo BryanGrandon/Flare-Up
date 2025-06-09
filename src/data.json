@@ -3,11 +3,14 @@
         "title": "Midas Touch",
         "description": "We foster the growth of new talent through training, mentoring and real opportunities. We transform potential into trajectory."
     },
-    "about": [
-        "At our platform we firmly believe that every talent deserves a real opportunity to shine. We don't just discover new voices, ideas and skills: we accompany them, nurture them and give them the space they need to flourish. We know that potential alone is not enough; that's why we provide concrete tools, specialized mentoring and access to opportunities that transform dreams into career paths.",
-        "We are passionate about connecting those who are taking their first steps with those who have already walked the path: artists, creators and professionals who, from their experience, can guide and inspire. We create bridges between the present and the future, between passion and projection. Because talent needs more than visibility: it needs a community that believes in it and encourages it.",
-        "If you have a vision, an idea or a skill to develop, here you will find an ecosystem designed to see you grow. We are here to accompany you, train you and show the world what you can achieve."
-    ],
+    "about": {
+        "title": "About Us",
+        "paragraphs": [
+            "We are a company committed to the growth of talent. We believe that each person has unique potential, and our mission is to provide the support needed to transform that potential into a real career path.",
+            "More than a company, we are a community that believes in the power of shared growth. We work to connect those who are just starting out with those who have already walked the path, generating networks of learning, collaboration and inspiration.",
+            "If you have a vision, a passion or a skill to develop, here you will find the space to grow, project yourself and make your mark."
+        ]
+    },
     "training": {
         "title": "Training for the future",
         "paragraphs": "We offer a comprehensive training program aimed at developing the skills and competencies needed to succeed in a dynamic and competitive environment. Our approach is based on personalized learning, hands-on experience and ongoing support, ensuring that each talent can reach their full potential. In addition to transmitting knowledge, we seek to develop people of integrity, capable of adding value with vision, passion and purpose in any field.",
@@ -39,7 +42,7 @@
         ]
     },
     "contact": {
-        "title": "Contact us",
+        "title": "Contact Us",
         "paragraphs": [
             "If you are interested in our training programs or have any questions, please do not hesitate to contact us. We are here to help you and provide you with all the information you need."
         ],

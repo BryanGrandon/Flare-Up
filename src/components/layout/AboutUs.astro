@@ -1,0 +1,19 @@
+---
+import Title from '../Title.astro'
+
+import data from '../../data.json' assert { type: 'json' }
+
+const { title, paragraphs } = data.about
+---
+
+<article id='about' class='bg-[#2e2e2e] w-full'>
+  <article class='lg:max-w-[1500px] m-auto p-8 prose-lg dark:prose-invert'>
+    <Title text={title} />
+    <article class='flex lg:flex-row flex-col gap-4 justify-between'>
+      <section class='prose dark:prose-invert'>
+        {paragraphs.map((e) => <p>{e}</p>)}
+      </section>
+      <img src='https://imageio.forbes.com/specials-images/imageserve/854442624/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds' alt='' class='max-h-70 rounded-lg max-w-100' />
+    </article>
+  </article>
+</article>

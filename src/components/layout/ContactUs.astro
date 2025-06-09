@@ -4,26 +4,34 @@ import ContactInfo from '../ContactInfo.astro'
 import IconAddress from '../icons/IconAddress.astro'
 import IconEmail from '../icons/IconEmail.astro'
 import IconPhone from '../icons/IconPhone.astro'
+import IconClock from '../icons/IconClock.astro'
 
 import data from '../../data.json' assert { type: 'json' }
-import IconClock from '../icons/IconClock.astro'
 
 const { contact } = data
 ---
 
-<article id='contact' class='prose-invert flex flex-col lg:flex-row min-h-120'>
-  <section class='flex flex-col p-4 pl-16 pb-16 bg-[url(https://i.pinimg.com/originals/e3/4e/4e/e34e4eab98f465ff678bc15d70057530.jpg)] bg-cover bg-center overlay h-full w-full'>
-    <Title text={contact.title} />
-    {contact.paragraphs.map((e) => <p class='relative max-w-4xl'>{e}</p>)}
-    <button class='relative border border-solid border-primary rounded-xl py-1 px-4 w-60 hover:scale-103 shadow-lg cursor-pointer transition-colors hover:bg-primary active:scale-95'>
-      Send a message
-    </button>
-  </section>
+<article id='contact' class='bg-[url(https://i.pinimg.com/originals/e3/4e/4e/e34e4eab98f465ff678bc15d70057530.jpg)] bg-cover bg-center overlay'>
+  <article class='flex flex-col lg:flex-row justify-between lg:max-w-[1500px] m-auto relative min-h-120 lg:items-center p-8 gap-16 lg:gap-8'>
+    <section class='flex flex-col h-full w-full prose prose-lg prose-invert'>
+      <Title text={contact.title} theClass='prose-invert' />
+      {contact.paragraphs.map((e) => <p>{e}</p>)}
+      <button class='relative border border-solid border-primary rounded-xl py-1 px-4 w-60 hover:scale-103 shadow-lg cursor-pointer transition-colors hover:bg-primary active:scale-95'>
+        Send a message
+      </button>
+    </section>
 
-  <article class='flex flex-col lg:justify-center gap-4 bg-secondary h-full min-w-[fit-content] p-8 lg:pr-14'>
-    <ContactInfo title='Hours of operation' text={contact.social.hoursOfOperation}><IconClock slot='icon' /></ContactInfo>
-    <ContactInfo title='Email' text={contact.social.email}><IconEmail slot='icon' /></ContactInfo>
-    <ContactInfo title='Phone' text={contact.social.phone}><IconPhone slot='icon' /></ContactInfo>
-    <ContactInfo title='Address' text={contact.social.address}><IconAddress slot='icon' /></ContactInfo>
+    <article class='flex flex-col lg:justify-between gap-4 bg-secondary-t rounded-xl p-6 backdrop-blur-md shadow-lg'>
+      <ContactInfo title='Hours of operation' text={contact.social.hoursOfOperation}><IconClock slot='icon' /></ContactInfo>
+      <ContactInfo title='Email' text={contact.social.email}><IconEmail slot='icon' /></ContactInfo>
+      <ContactInfo title='Phone' text={contact.social.phone}><IconPhone slot='icon' /></ContactInfo>
+      <ContactInfo title='Address' text={contact.social.address}><IconAddress slot='icon' /></ContactInfo>
+    </article>
   </article>
 </article>
+
+<style>
+  p {
+    max-width: fit-content;
+  }
+</style>
