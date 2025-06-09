@@ -4,19 +4,16 @@ import data from '../data.json' assert { type: 'json' }
 import Header from '../components/Header.astro'
 import Title from '../components/Title.astro'
 import Card from '../components/Card.astro'
-import IconPhone from '../components/icons/IconPhone.astro'
-import IconEmail from '../components/icons/IconEmail.astro'
-import IconAddress from '../components/icons/IconAddress.astro'
-import ContactInfo from '../components/ContactInfo.astro'
+import ContactUs from '../components/layout/ContactUs.astro'
 
-const { training, contact } = data
+const { training } = data
 const about = data.about
 ---
 
 <Layout>
   <Header />
 
-  <main class='flex flex-col gap-16'>
+  <main class='flex flex-col gap-16 prose-lg dark:prose-invert'>
     <article id='training' class='prose-lg dark:prose-invert'>
       <Title text={training.title} />
       <p>{training.paragraphs}</p>
@@ -37,24 +34,7 @@ const about = data.about
         <img src='/team.svg' alt='Our_Team' class='w-100 m-auto' />
       </article>
     </article>
-
-    <article id='contact' class='prose-lg dark:prose-invert flex flex-col lg:flex-row justify-center min-h-120'>
-      <section
-        class='flex flex-col gap-4 justify-space-between p-4 bg-[url(https://i.pinimg.com/originals/e3/4e/4e/e34e4eab98f465ff678bc15d70057530.jpg)] bg-cover bg-center text-white overlay h-full'
-      >
-        <Title text='Contact US' />
-        {contact.paragraphs.map((e) => <p class='relative'>{e}</p>)}
-      </section>
-      <article class='flex lg:flex-row flex-col gap-4'>
-        <article>
-          <article class='flex flex-col lg:justify-center gap-4 bg-[#38385a] h-full min-w-100 p-4'>
-            <ContactInfo title='Phone' text='+1 234 567 890'><IconPhone slot='icon' /></ContactInfo>
-            <ContactInfo title='Email' text='contact@themidasgroup.co'><IconEmail slot='icon' /></ContactInfo>
-            <ContactInfo title='Address' text='1234 Training Lane, Skill City, ST 56789'><IconAddress slot='icon' /></ContactInfo>
-          </article>
-        </article>
-      </article>
-    </article>
+    <ContactUs />
   </main>
   <footer>
     <section>

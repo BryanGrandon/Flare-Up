@@ -42,6 +42,12 @@
         "title": "Contact us",
         "paragraphs": [
             "If you are interested in our training programs or have any questions, please do not hesitate to contact us. We are here to help you and provide you with all the information you need."
-        ]
+        ],
+        "social": {
+            "email": "contact@themidasgroup.com",
+            "phone": " +1 (555) 123-4567",
+            "address": "Av. Invent 1234, 7th Floor, Office 702",
+            "hoursOfOperation": "9:00 a.m. - 6:00 p.m."
+        }
     }
 }
