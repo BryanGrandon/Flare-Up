@@ -16,7 +16,7 @@ const about = data.about
 <Layout>
   <Header />
 
-  <main class='max-w-[1500px] m-auto flex flex-col gap-16 pt-10 p-4'>
+  <main class='flex flex-col gap-16'>
     <article id='training' class='prose-lg dark:prose-invert'>
       <Title text={training.title} />
       <p>{training.paragraphs}</p>
@@ -38,19 +38,21 @@ const about = data.about
       </article>
     </article>
 
-    <article id='contact' class='prose-lg dark:prose-invert'>
-      <Title text='Contact US' />
+    <article id='contact' class='prose-lg dark:prose-invert flex flex-col lg:flex-row justify-center min-h-120'>
+      <section
+        class='flex flex-col gap-4 justify-space-between p-4 bg-[url(https://i.pinimg.com/originals/e3/4e/4e/e34e4eab98f465ff678bc15d70057530.jpg)] bg-cover bg-center text-white overlay h-full'
+      >
+        <Title text='Contact US' />
+        {contact.paragraphs.map((e) => <p class='relative'>{e}</p>)}
+      </section>
       <article class='flex lg:flex-row flex-col gap-4'>
         <article>
-          {contact.paragraphs.map((e) => <p>{e}</p>)}
-
-          <article class='flex flex-col gap-4'>
+          <article class='flex flex-col lg:justify-center gap-4 bg-[#38385a] h-full min-w-100 p-4'>
             <ContactInfo title='Phone' text='+1 234 567 890'><IconPhone slot='icon' /></ContactInfo>
             <ContactInfo title='Email' text='contact@themidasgroup.co'><IconEmail slot='icon' /></ContactInfo>
             <ContactInfo title='Address' text='1234 Training Lane, Skill City, ST 56789'><IconAddress slot='icon' /></ContactInfo>
           </article>
         </article>
-        <img src='/contact-us.svg' alt='Contact Us' class='w-100' />
       </article>
     </article>
   </main>
