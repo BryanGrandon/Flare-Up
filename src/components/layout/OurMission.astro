@@ -1,0 +1,16 @@
+---
+import Title from '../Title.astro'
+import data from '../../data.json' assert { type: 'json' }
+
+const { title, paragraphs } = data.ourMission
+---
+
+<article id='our-mission' class='w-full'>
+  <article class='max-w-[1500px] m-auto p-8 flex flex-col lg:flex-row-reverse lg:justify-between lg:items-end gap-8'>
+    <section class='prose-lg lg:flex flex-col justify-center'>
+      <Title text={title} />
+      {paragraphs.map((e) => <p class='prose dark:prose-invert'>{e}</p>)}
+    </section>
+    <img src='https://cerfrancebfc.cerfrance.fr/upload/images/headers/66a895fda13c35.78727753_meeting.jpeg' alt='' class='max-h-70 rounded-lg max-w-110 w-full mx-auto' />
+  </article>
+</article>

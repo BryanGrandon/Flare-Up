@@ -1,11 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import data from '../data.json' assert { type: 'json' }
 import Header from '../components/Header.astro'
 import Title from '../components/Title.astro'
 import Card from '../components/Card.astro'
 import ContactUs from '../components/layout/ContactUs.astro'
 import AboutUs from '../components/layout/AboutUs.astro'
+import OurMission from '../components/layout/OurMission.astro'
+import data from '../data.json' assert { type: 'json' }
 
 const { training } = data
 ---
@@ -26,12 +27,15 @@ const { training } = data
     </article>
 
     <AboutUs />
+
+    <OurMission />
+
     <ContactUs />
   </main>
-  <footer>
-    <section>
-      <h3>Attribute</h3>
-      <a href='https://storyset.com/business' target='_blank'>Business illustrations by Storyset</a>
-    </section>
-  </footer>
 </Layout>
+<footer>
+  <section>
+    <h3>Attribute</h3>
+    <a href='https://storyset.com/business' target='_blank'>Business illustrations by Storyset</a>
+  </section>
+</footer>

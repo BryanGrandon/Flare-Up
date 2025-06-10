@@ -8,12 +8,12 @@ const { title, paragraphs } = data.about
 
 <article id='about' class='bg-[#2e2e2e] w-full'>
   <article class='lg:max-w-[1500px] m-auto p-8 prose-lg dark:prose-invert'>
-    <Title text={title} />
-    <article class='flex lg:flex-row flex-col gap-4 justify-between'>
-      <section class='prose dark:prose-invert'>
-        {paragraphs.map((e) => <p>{e}</p>)}
+    <article class='flex lg:flex-row flex-col gap-4 justify-between lg:items-end'>
+      <section class='prose-lg'>
+        <Title text={title} />
+        {paragraphs.map((e) => <p class='prose dark:prose-invert'>{e}</p>)}
       </section>
-      <img src='https://imageio.forbes.com/specials-images/imageserve/854442624/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds' alt='' class='max-h-70 rounded-lg max-w-100' />
+      <img src='https://imageio.forbes.com/specials-images/imageserve/854442624/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds' alt='' class='max-h-70 rounded-lg max-w-100 mx-auto' />
     </article>
   </article>
 </article>
