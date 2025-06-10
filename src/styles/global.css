@@ -1,12 +1,20 @@
 @import 'tailwindcss';
-
 @plugin "@tailwindcss/typography";
+
+@font-face {
+  font-family: 'Basicaline';
+  src: url('/fonts/Basicaline.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @theme {
   --color-primary: #ff7129;
   --color-secondary: #030726;
   --color-secondary-t: #0307266e;
   --color-background: #ef5808;
+  --font-basicaline: 'Basicaline', sans-serif;
 }
 
 @layer {
