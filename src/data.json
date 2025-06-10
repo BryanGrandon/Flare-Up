@@ -9,14 +9,22 @@
             "We are a company committed to the growth of talent. We believe that each person has unique potential, and our mission is to provide the support needed to transform that potential into a real career path.",
             "More than a company, we are a community that believes in the power of shared growth. We work to connect those who are just starting out with those who have already walked the path, generating networks of learning, collaboration and inspiration.",
             "If you have a vision, a passion or a skill to develop, here you will find the space to grow, project yourself and make your mark."
-        ]
+        ],
+        "image": {
+            "src": "https://imageio.forbes.com/specials-images/imageserve/854442624/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds",
+            "alt": "Group (About Us) Image"
+        }
     },
     "ourMission": {
         "title": "Our Mission",
         "paragraphs": [
             "Our mission is to empower every individual with the tools, guidance, and opportunities they need to turn their unique potential into a meaningful professional journey.",
             "We are committed to nurturing talent by providing practical resources, specialized mentorship, and real access to opportunities that help transform dreams into concrete achievements. We walk alongside each person, offering not just training and direction, but a supportive environment that fosters confidence, creativity, and continuous growth."
-        ]
+        ],
+        "image": {
+            "src": "https://cerfrancebfc.cerfrance.fr/upload/images/headers/66a895fda13c35.78727753_meeting.jpeg",
+            "alt": "Meeting (Our Mission) Image"
+        }
     },
     "training": {
         "title": "Training for the future",

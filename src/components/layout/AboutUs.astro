@@ -1,9 +1,9 @@
 ---
 import Title from '../Title.astro'
-
 import data from '../../data.json' assert { type: 'json' }
+import Image from '../Image.astro'
 
-const { title, paragraphs } = data.about
+const { title, paragraphs, image } = data.about
 ---
 
 <article id='about' class='bg-[#2e2e2e] w-full'>
@@ -13,7 +13,8 @@ const { title, paragraphs } = data.about
         <Title text={title} />
         {paragraphs.map((e) => <p class='prose dark:prose-invert'>{e}</p>)}
       </section>
-      <img src='https://imageio.forbes.com/specials-images/imageserve/854442624/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds' alt='' class='max-h-70 rounded-lg max-w-100 mx-auto' />
+
+      <Image src={image.src} alt={image.alt} />
     </article>
   </article>
 </article>
