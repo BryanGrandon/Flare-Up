@@ -1,35 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Header from '../components/layout/Header.astro'
-import Title from '../components/Title.astro'
-import Card from '../components/Card.astro'
 import ContactUs from '../components/layout/ContactUs.astro'
 import AboutUs from '../components/layout/AboutUs.astro'
 import OurMission from '../components/layout/OurMission.astro'
-import data from '../data.json' assert { type: 'json' }
-
-const { training } = data
+import Training from '../components/layout/Training.astro'
 ---
 
 <Layout>
   <Header />
 
   <main class='flex flex-col'>
-    <article id='training' class='prose-lg dark:prose-invert'>
-      <Title text={training.title} />
-      <p>{training.paragraphs}</p>
-      <article class='flex lg:flex-row flex-col gap-4 justify-between'>
-        <section class='not-prose flex flex-col gap-4'>
-          {training.list.map((e) => <Card title={e.title} description={e.description} />)}
-        </section>
-        <img src='/conference.svg' alt='' class='w-80' />
-      </article>
-    </article>
-
+    <Training />
     <AboutUs />
-
     <OurMission />
-
     <ContactUs />
   </main>
 </Layout>

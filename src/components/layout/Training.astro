@@ -1,0 +1,24 @@
+---
+import Card from '../Card.astro'
+import Title from '../Title.astro'
+import data from '../../data.json' assert { type: 'json' }
+import Image from '../Image.astro'
+
+const { title, list, paragraphs } = data.training
+---
+
+<article id='training' class='w-full'>
+  <article class='lg:max-w-[1500px] lg:m-auto p-8'>
+    <article class='flex lg:flex-row flex-col gap-4 justify-between lg:items-end'>
+      <section class='prose-lg'>
+        <Title text={title} />
+        {paragraphs.map((e) => <p class='prose dark:prose-invert'>{e}</p>)}
+      </section>
+
+      <Image src='https://wpvip.edutopia.org/wp-content/uploads/2023/04/shutterstock_2090272477-crop.jpg?w=2880&quality=85' alt='teaching' />
+    </article>
+    <section class='not-prose flex flex-col gap-2 mt-10'>
+      {list.map((e) => <Card title={e.title} description={e.description} />)}
+    </section>
+  </article>
+</article>

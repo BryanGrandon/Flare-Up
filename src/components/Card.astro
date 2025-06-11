@@ -7,7 +7,7 @@ interface Props {
 const { title, description } = Astro.props
 ---
 
-<details>
-  <summary class='font-bold'>{title}.</summary>
-  <p class='px-5'>{description}</p>
+<details class='bg-[#202020] rounded-lg p-2 shadow max-w-145'>
+  <summary class='font-basicaline text-xl cursor-pointer hover:text-primary'>{title}.</summary>
+  <p class='px-5 prose dark:prose-invert text-sm'>{description}</p>
 </details>

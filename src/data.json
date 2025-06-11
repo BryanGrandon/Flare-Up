@@ -29,7 +29,11 @@
     },
     "training": {
         "title": "Training for the future",
-        "paragraphs": "We offer a comprehensive training program aimed at developing the skills and competencies needed to succeed in a dynamic and competitive environment. Our approach is based on personalized learning, hands-on experience and ongoing support, ensuring that each talent can reach their full potential. In addition to transmitting knowledge, we seek to develop people of integrity, capable of adding value with vision, passion and purpose in any field.",
+        "paragraphs": [
+            "We offer a comprehensive training program aimed at developing the skills and competencies needed to succeed in a dynamic and competitive environment.",
+            "Our approach is based on personalized learning, hands-on experience and ongoing support, ensuring that each talent can reach their full potential.",
+            "In addition to transmitting knowledge, we seek to develop people of integrity, capable of adding value with vision, passion and purpose in any field."
+        ],
         "list": [
             {
                 "title": "Personalized approach",
