@@ -38,12 +38,14 @@
   }
 
   .glassmorphism {
-    color: #fff;
-    background: rgba(0, 0, 0, 0.589);
+    background: rgba(0, 0, 0, 0.096);
     border-radius: 0.5rem;
     backdrop-filter: blur(0.2rem);
     -webkit-backdrop-filter: blur(0.2rem);
-    border: 1px solid rgba(0, 0, 0, 0.31);
+    border: 1px solid rgba(0, 0, 0, 0.082);
+    @media (prefers-color-scheme: dark) {
+      border: 1px solid rgba(255, 255, 255, 0.082);
+    }
   }
 
   .test {

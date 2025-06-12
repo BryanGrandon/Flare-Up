@@ -27,7 +27,7 @@
             "alt": "Meeting (Our Mission) Image"
         }
     },
-    "WhatWeOffer": {
+    "whatWeOffer": {
         "title": "What we offer",
         "paragraphs": [
             "We offer a comprehensive training program aimed at developing the skills and competencies needed to succeed in a dynamic and competitive environment.",
@@ -58,6 +58,35 @@
             {
                 "title": "Ethics and values",
                 "description": "We promote a sense of responsibility, social commitment and professional ethics, essential for building a sustainable and just future."
+            }
+        ]
+    },
+    "Testimonials": {
+        "title": "Testimonials",
+        "paragraphs": [
+            "We are proud to share the experiences of those who have been part of our training programs. Their success stories are a testament to the impact of our approach and the value of our community.",
+            "Here are some testimonials from participants who have transformed their potential into real opportunities."
+        ],
+        "testimonials": [
+            {
+                "author": "Valentina R.",
+                "profession": "From undecided student to data analyst",
+                "quote": "I didn't know where to start. This program not only taught me technical skills, it also empowered me with an amazing mentor who helped me believe in myself. Today I work as an analyst at a fintech, and I'm still learning every day."
+            },
+            {
+                "author": "Luis M.",
+                "profession": "From delivery guy to web developer",
+                "quote": "I had the potential, but I needed direction. I learned to program from scratch and got an internship that turned into a permanent job. Mentoring was key. Now, I build digital tools for impactful companies."
+            },
+            {
+                "author": "Natalia G.",
+                "profession": "Reinventing her career as a data scientist",
+                "quote": "After years in an industry that didn't motivate me, I decided to bet on my passion for technology. Thanks to the constant support of the team and a clear training plan, today I lead data projects in a startup."
+            },
+            {
+                "author": "Oliver T.",
+                "profession": "Finding purpose in UX design",
+                "quote": "I never thought that my love for art and empathy could become a profession. Here I learned to focus my talent, received mentoring and today I work as a UX designer creating people-centered experiences."
             }
         ]
     },
