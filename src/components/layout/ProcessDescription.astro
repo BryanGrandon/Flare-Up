@@ -1,0 +1,38 @@
+---
+import Title from '../Title.astro'
+import data from '../../data.json' assert { type: 'json' }
+
+const { title, paragraph, list } = data.process
+
+const first = list.slice(0, 3)
+const second = list.slice(3, 7)
+
+const theList = [first, second]
+---
+
+<article class='w-full'>
+  <article class='lg:max-w-[1500px] m-auto p-8'>
+    <article class='flex flex-col gap-8'>
+      <section class='prose-lg'>
+        <Title text={title} />
+        <p class='prose dark:prose-invert'>{paragraph}</p>
+      </section>
+      <section class='grid grid-cols-1 lg:grid-cols-2 gap-4'>
+        {
+          theList.map((list) => (
+            <section class='flex flex-col gap-4'>
+              {list.map((e) => (
+                <section>
+                  <p class='font-basicaline text-xl font-semibold'>
+                    <span class='w-5 inline-block text-primary font-bold tracking-widest'>{e.id}</span> {e.title}
+                  </p>
+                  <p class='prose dark:prose-invert pl-6'> {e.description}</p>
+                </section>
+              ))}
+            </section>
+          ))
+        }
+      </section>
+    </article>
+  </article>
+</article>

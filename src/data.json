@@ -90,6 +90,42 @@
             }
         ]
     },
+    "process": {
+        "title": "Process description",
+        "paragraph": "Each step of our process is designed to empower you with what you need to transform your potential into a meaningful career.",
+        "list": [
+            {
+                "id": "I",
+                "title": "Application",
+                "description": "The first step is a simple but meaningful application, we identify your interests, skills and aspirations. We are not looking for previous experience, we are looking for purpose and motivation."
+            },
+            {
+                "id": "II",
+                "title": "Exploration of the potential",
+                "description": "We start by getting to know you: your talents, motivations and goals. Through interviews and self-assessments, we discover together your starting point and where you want to go."
+            },
+            {
+                "id": "III",
+                "title": "Access to Relevant Tools",
+                "description": "We provide you with the resources you need to grow: technical training, soft skills, work methodologies, access to platforms and content designed for your profile."
+            },
+            {
+                "id": "IV",
+                "title": "Personalized mentoring",
+                "description": "We connect you with people who have already walked the path. These mentors provide you with guidance, clarity, emotional and professional support during the process."
+            },
+            {
+                "id": "V",
+                "title": "Real and Actionable Opportunities",
+                "description": "When you're ready, we bring you closer to concrete opportunities: internships, jobs, projects or collaborations that mark the beginning of your purposeful career path."
+            },
+            {
+                "id": "VI",
+                "title": "Continuous Growth",
+                "description": "We know that development doesn't end with the first step. That's why we continue to support you with community, resources and new opportunities as you move forward."
+            }
+        ]
+    },
     "contact": {
         "title": "Contact Us",
         "paragraphs": [
