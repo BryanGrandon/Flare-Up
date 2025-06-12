@@ -1,0 +1,22 @@
+---
+interface Props {
+  author: string
+  profession: string
+  quote: string
+}
+
+const { author, profession, quote } = Astro.props
+---
+
+<article class='glassmorphism p-4 rounded-lg shadow-md grid gap-2'>
+  <section class='text-center'>
+    <p class='font-semibold font-basicaline text-xl mt-2'>{author}</p>
+    <span class='border border-solid border-primary w-30 m-auto block h-0 mb-2'></span>
+    <p class='text-sm'>{profession}</p>
+  </section>
+  <p class='italic prose dark:prose-invert font-semibold'>
+    <span class='text-primary font-bold text-xl'>"</span>
+    {quote}
+    <span class='text-primary font-bold text-xl'>"</span>
+  </p>
+</article>

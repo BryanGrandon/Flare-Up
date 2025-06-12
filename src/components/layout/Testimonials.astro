@@ -1,6 +1,7 @@
 ---
 import Title from '../Title.astro'
 import data from '../../data.json' assert { type: 'json' }
+import TestimonialCard from '../TestimonialCard.astro'
 
 const { title, paragraphs, testimonials } = data.Testimonials
 ---
@@ -14,20 +15,7 @@ const { title, paragraphs, testimonials } = data.Testimonials
       </section>
     </article>
     <section class='not-prose grid grid-cols-1 lg:grid-cols-2 gap-4'>
-      {
-        testimonials.map((testimonial) => (
-          <section class='glassmorphism p-4 rounded-lg shadow-md  grid gap-2'>
-            <section class='text-center'>
-              <p class='font-semibold font-basicaline text-xl mt-2'>{testimonial.author}</p>
-              {/* <span class='border border-solid border-primary w-40 m-auto block h-0 rounded-xl'>s</span> */}
-              <p class='text-sm'>{testimonial.profession}</p>
-            </section>
-            <p class='italic prose dark:prose-invert font-semibold'>
-              <span class='text-primary font-bold text-xl'>"</span> {testimonial.quote} <span class='text-primary font-bold text-xl'>"</span>
-            </p>
-          </section>
-        ))
-      }
+      {testimonials.map(({ author, profession, quote }) => <TestimonialCard author={author} profession={profession} quote={quote} />)}
     </section>
   </article>
 </article>
