@@ -7,7 +7,7 @@ const { title, paragraphs, image } = data.ourMission
 ---
 
 <article id='our-mission' class='w-full'>
-  <article class='max-w-[1500px] m-auto p-8 flex flex-col lg:flex-row-reverse lg:justify-between lg:items-end gap-8'>
+  <article class='max-w-[1500px] m-auto p-8 flex flex-col lg:flex-row lg:justify-between lg:items-end gap-8'>
     <section class='prose-lg lg:flex flex-col justify-center'>
       <Title text={title} />
       {paragraphs.map((e) => <p class='prose dark:prose-invert'>{e}</p>)}

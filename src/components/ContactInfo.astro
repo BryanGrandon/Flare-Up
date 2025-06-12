@@ -7,7 +7,7 @@ interface Contact_Info {
 const { title, text } = Astro.props as Contact_Info
 ---
 
-<section class='not-prose flex flex-col gap-2'>
+<section class='not-prose flex flex-col gap-2 text-white'>
   <div class='flex items-center gap-4'>
     <slot name='icon' />
     <p class='font-basicaline text-xl'>{title}</p>
