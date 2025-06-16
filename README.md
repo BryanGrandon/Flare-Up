@@ -2,7 +2,7 @@
 
 We foster the growth of new talent through training, mentoring and real opportunities. We transform potential into trajectory.
 
-<!-- - [🌐 Website Demo.](https://bryangrandon.github.io/Flare-Up/) -->
+- [🌐 Website Demo.](https://bryangrandon.github.io/Midas-Touch/)
 
 ## 📚 Technologies Used
 
