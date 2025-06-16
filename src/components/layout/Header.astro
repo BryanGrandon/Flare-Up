@@ -7,17 +7,12 @@ const { title, logo, description } = data.header
 <header class=`h-[100dvh] w-full p-8 overlay bg-[url(https://images.hdqwalls.com/wallpapers/mountains-moon-trees-minimalism-hd.jpg)] bg-cover bg-top`>
   <nav class='flex justify-between mb-4 relative max-w-[1500px] m-auto'>
     <NavLink href='#' text={logo} />
-    <section class='flex gap-4 items-center'>
-      <NavLink href='#about' text='About' />
-      <NavLink href='#our-mission' text='Our mission' />
-      <NavLink href='#contact' text='Contact' />
-    </section>
+    <NavLink href='https://github.com/BryanGrandon/Midas-Touch' text='Github' />
   </nav>
   <main class='max-w-[1500px] flex flex-col gap-30 m-auto items-center justify-center h-3/4'>
     <article class='relative flex items-center justify-center'>
       <section class='prose prose-invert text-center'>
         <h1 class='text-5xl font-basicaline'>{title}</h1>
-
         <p class='text-xl text-gray-300'>{description}</p>
       </section>
     </article>
