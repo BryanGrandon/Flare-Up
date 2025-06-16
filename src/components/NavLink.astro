@@ -7,4 +7,4 @@ interface Props {
 const { href, text, theClass } = Astro.props
 ---
 
-<a href={href} class=`text-xl text-white hover:text-gray-300 ${theClass}`>{text}</a>
+<a href={href} class=`text-xl text-white hover:text-gray-300 ${theClass}`> <slot name='icon' /> {text}</a>
